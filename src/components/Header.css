@@ -1,0 +1,169 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.logo .green {
+  color: #00cc00;
+}
+
+.logo .black {
+  color: black;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 16px;
+}
+
+.nav a:hover {
+  color: #00cc00;
+}
+
+.search-bar {
+  position: relative;
+  flex: 1;
+  max-width: 350px;
+  margin: 0 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px 16px 8px 36px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #888;
+  width: 16px;
+  height: 16px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #00cc00;
+}
+
+.cart-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #00cc00;
+  color: white;
+  font-size: 11px;
+  border-radius: 50%;
+  padding: 2px 5px;
+  line-height: 1;
+}
+
+/* Add this to highlight active link */
+.nav a.active,
+.mobile-menu a.active {
+  color: #00cc00;
+  font-weight: bold;
+  border-bottom: 2px solid #00cc00;
+}
+
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 20px;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+.mobile-menu input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav,
+  .search-bar {
+    display: none;
+  }
+
+  .menu-btn {
+    display: inline-block;
+            background-color: green;
+        width: 60px;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+}
